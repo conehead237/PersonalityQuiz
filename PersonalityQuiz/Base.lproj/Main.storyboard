@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -204,17 +205,32 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mVA-pZ-23y">
+                                <rect key="frame" x="20" y="84" width="335" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="FAf-Nb-OJu">
+                                <rect key="frame" x="16" y="645" width="343" height="2"/>
+                            </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="FAf-Nb-OJu" firstAttribute="leading" secondItem="ebm-dj-CjW" secondAttribute="leadingMargin" id="48o-2w-kkl"/>
                             <constraint firstItem="Jza-nP-1mg" firstAttribute="leading" secondItem="xeA-lG-xVg" secondAttribute="leading" constant="142" id="GTq-9F-wGX"/>
                             <constraint firstItem="Jza-nP-1mg" firstAttribute="leading" secondItem="xeA-lG-xVg" secondAttribute="leading" constant="20" id="HBa-JJ-ELf"/>
+                            <constraint firstItem="xeA-lG-xVg" firstAttribute="bottom" secondItem="FAf-Nb-OJu" secondAttribute="bottom" constant="20" id="I56-Ht-6g5"/>
+                            <constraint firstItem="mVA-pZ-23y" firstAttribute="top" secondItem="xeA-lG-xVg" secondAttribute="top" constant="20" id="IlK-5I-pPi"/>
                             <constraint firstItem="xeA-lG-xVg" firstAttribute="trailing" secondItem="Jza-nP-1mg" secondAttribute="trailing" constant="20" id="J6Z-dr-zIx"/>
                             <constraint firstItem="Jza-nP-1mg" firstAttribute="leading" secondItem="xeA-lG-xVg" secondAttribute="leading" constant="20" id="KiX-Of-MQ4"/>
+                            <constraint firstItem="mVA-pZ-23y" firstAttribute="leading" secondItem="xeA-lG-xVg" secondAttribute="leading" constant="20" id="OJb-3H-oL7"/>
                             <constraint firstItem="Cuy-GD-D8T" firstAttribute="leading" secondItem="xeA-lG-xVg" secondAttribute="leading" constant="20" id="P7O-do-Kds"/>
                             <constraint firstItem="Cuy-GD-D8T" firstAttribute="centerY" secondItem="ebm-dj-CjW" secondAttribute="centerY" id="PYU-g5-BXb"/>
                             <constraint firstItem="xeA-lG-xVg" firstAttribute="trailing" secondItem="Jza-nP-1mg" secondAttribute="trailing" constant="142" id="QbI-4d-0AY"/>
                             <constraint firstItem="xeA-lG-xVg" firstAttribute="trailing" secondItem="Jza-nP-1mg" secondAttribute="trailing" constant="20" id="TgZ-g2-cSp"/>
+                            <constraint firstItem="FAf-Nb-OJu" firstAttribute="centerX" secondItem="mVA-pZ-23y" secondAttribute="centerX" id="hF0-Sc-Ds7"/>
+                            <constraint firstItem="xeA-lG-xVg" firstAttribute="trailing" secondItem="mVA-pZ-23y" secondAttribute="trailing" constant="20" id="mrM-MX-HeT"/>
                             <constraint firstItem="NMV-kt-hQw" firstAttribute="leading" secondItem="xeA-lG-xVg" secondAttribute="leading" constant="20" id="p2H-I6-7lc"/>
                             <constraint firstItem="NMV-kt-hQw" firstAttribute="centerY" secondItem="ebm-dj-CjW" secondAttribute="centerY" id="pnM-im-HUl"/>
                             <constraint firstItem="NMV-kt-hQw" firstAttribute="centerY" secondItem="ebm-dj-CjW" secondAttribute="centerY" id="q6G-1o-JDd"/>
@@ -224,6 +240,7 @@
                             <mask key="subviews">
                                 <exclude reference="NMV-kt-hQw"/>
                                 <exclude reference="Jza-nP-1mg"/>
+                                <exclude reference="Cuy-GD-D8T"/>
                             </mask>
                         </variation>
                     </view>
