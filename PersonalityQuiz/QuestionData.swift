@@ -8,28 +8,40 @@
 
 import UIKit
 
-class QuestionData: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+struct Question {
+    var text: String
+    var type: ResponseType
+    var answers: [Answer]
+}
+    
+    enum ResponseType {
+        case single, multiple, ranged
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    struct Answer {
+        var text: String
+        var type: AnimalType
     }
-    */
+    
+    enum AnimalType: Character {
+        case dog = "🐶", cat = "🐱", bunny = "🐰",turtle = "🐢"
+    
+        var definition: String {
+            switch self {
+            case .dog:
+                return "You are incedibly outgoing. You surrond yourslef with the people you love and enjoy activities with your friends."
+            case .cat:
+                return "Mischievous, yet mild-tempered, you enjoy doing things on your own terms."
+            case .bunny:
+                return "You love everything that's soft. You are healthy and full of energy."
+            case .turtle:
+                return "You are wise beyond your years, and you focus on the details. Slow and steady wins the race."
+            }
+        }
+    }
 
-}
+
+
+
