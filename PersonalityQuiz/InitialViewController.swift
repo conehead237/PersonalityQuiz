@@ -18,13 +18,10 @@ class InitialViewController: UIViewController {
 
     
     @IBAction func BeginButtonPushed(_ sender: UIButton) {
-        performSegue(withIdentifier: "resultSegue", sender: nil )
+        performSegue(withIdentifier: "IntitialSegue", sender: nil )
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+  
 
 
 }
